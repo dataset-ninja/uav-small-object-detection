@@ -20,7 +20,7 @@ RELEASE_YEAR: int = 2023
 HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/sovitrath/uav-small-object-detection-dataset"
 # e.g. "https://some.com/dataset/homepage"
 
-PREVIEW_IMAGE_ID: int = None
+PREVIEW_IMAGE_ID: int = 1545749
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
 GITHUB_URL: str = "https://github.com/dataset-ninja/uav-small-object-detection"
@@ -29,7 +29,9 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/uav-small-object-detection"
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://www.kaggle.com/datasets/sovitrath/uav-small-object-detection-dataset/download?datasetVersionNumber=1"
+DOWNLOAD_ORIGINAL_URL: Optional[
+    Union[str, dict]
+] = "https://www.kaggle.com/datasets/sovitrath/uav-small-object-detection-dataset/download?datasetVersionNumber=1"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
