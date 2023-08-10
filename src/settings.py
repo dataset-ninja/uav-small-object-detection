@@ -25,7 +25,7 @@ APPLICATIONS: List[Union[Industry, Domain, Research]] = [
     Domain.DroneInspection(),
     Research.Geospatial(),
 ]
-CATEGORY: Category = Category.Aerial(extra=Category.Drones())
+CATEGORY: Category = Category.Aerial(extra=Category.Drones(), is_original_dataset=False)
 
 CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
@@ -66,7 +66,7 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = {
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://www.sciencedirect.com/science/article/pii/S1569843222001595"
-CITATION_URL: Optional[str] = "https://www.sciencedirect.com/science/article/pii/S1569843222001595"
+CITATION_URL: Optional[str] = None
 AUTHORS: Optional[List[str]] = [
     "Wei Han",
     "Jun Li",
