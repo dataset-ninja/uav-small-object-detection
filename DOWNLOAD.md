@@ -1,6 +1,6 @@
 Dataset **UAV Small Object Detection (UAVOD-10)** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/M/E/nQ/cWw9MTtjg4vdxWVn3z4MqTemT8ERsGzikHgIrd1hNd2mZIN94QcS3uoJmO7IOFxaBLZfGY8CfHo9UGurgy5LtlOSO5oNJmY96yC99uJzrC38aRBSbtim3RdJPZaY.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/R/h/oY/ZUYmhz3iJJZFjKC8dFWTQ2bLEe00kylUrn3eFDictSzwCHZqVIlKGyCAKnB8BzSKDrUAy8RhieZuf1QidoYQV0LNqVMyDU6QcY7eNobiIL86xlfjugkDK0OGZj4A.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
@@ -15,4 +15,4 @@ dtools.download(dataset='UAV Small Object Detection (UAVOD-10)', dst_dir='~/data
 ```
 Make sure not to overlook the [python code example](https://developer.supervisely.com/getting-started/python-sdk-tutorials/iterate-over-a-local-project) available on the Supervisely Developer Portal. It will give you a clear idea of how to effortlessly work with the downloaded dataset.
 
-The data in original format can be [downloaded here](https://www.kaggle.com/datasets/sovitrath/uav-small-object-detection-dataset/download?datasetVersionNumber=1)
+The data in original format can be [downloaded here](https://www.kaggle.com/datasets/sovitrath/uav-small-object-detection-dataset/download?datasetVersionNumber=1).
