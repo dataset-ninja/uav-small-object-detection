@@ -15,6 +15,7 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "UAV Small Object Detection (UAVOD-10)"
 PROJECT_NAME_FULL: str = "UAV Small Object Detection (UAVOD-10)"
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -103,6 +104,7 @@ def get_settings():
     settings = {
         "project_name": PROJECT_NAME,
         "license": LICENSE,
+        "hide_dataset": HIDE_DATASET,        
         "applications": APPLICATIONS,
         "category": CATEGORY,
         "cv_tasks": CV_TASKS,
