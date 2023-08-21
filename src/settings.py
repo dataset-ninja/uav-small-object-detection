@@ -68,7 +68,11 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = {
 }
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
-PAPER: Optional[str] = "https://www.sciencedirect.com/science/article/pii/S1569843222001595"
+PAPER: Optional[str] = [
+    "https://www.sciencedirect.com/science/article/pii/S1569843222001595",
+    "https://ieeexplore.ieee.org/abstract/document/9335501",
+    "https://ieeexplore.ieee.org/abstract/document/9281082",
+]
 CITATION_URL: Optional[str] = None
 AUTHORS: Optional[List[str]] = [
     "Wei Han",
