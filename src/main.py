@@ -4,11 +4,11 @@ import os
 import sys
 
 import supervisely as sly
-from dataset_tools import ProjectRepo
 from dotenv import load_dotenv
 
 import src.options as o
 import src.settings as s
+from dataset_tools import ProjectRepo
 from src.convert import convert_and_upload_supervisely_project
 
 PARENT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     force_visuals = forces.get("force_visuals")
     force_texts = forces.get("force_texts")
 
-    settings['force_texts'] = force_texts
+    settings["force_texts"] = force_texts
     project_repo = ProjectRepo(api, project_id, settings)
     project_repo.build_stats(force=force_stats, settings=stat_options)
     project_repo.build_visualizations(force=force_visuals, settings=vis_options)

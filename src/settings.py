@@ -13,8 +13,8 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "UAV Small Object Detection (UAVOD-10)"
-PROJECT_NAME_FULL: str = "UAV Small Object Detection (UAVOD-10)"
+PROJECT_NAME: str = "UAVOD-10"
+PROJECT_NAME_FULL: str = "UAVOD-10: 10 category UAV Small Weak Object Detection Dataset"
 HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
@@ -35,7 +35,9 @@ RELEASE_DATE: Optional[str] = "2022-08-20"  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
     RELEASE_YEAR: int = None
 
-HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/sovitrath/uav-small-object-detection-dataset"
+HOMEPAGE_URL: str = (
+    "https://github.com/weihancug/10-category-UAV-small-weak-object-detection-dataset-UAVOD10"
+)
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = 1545749
@@ -49,7 +51,7 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/uav-small-object-detection"
 ##################################
 DOWNLOAD_ORIGINAL_URL: Optional[
     Union[str, dict]
-] = "https://www.kaggle.com/datasets/sovitrath/uav-small-object-detection-dataset/download?datasetVersionNumber=1"
+] = "https://drive.google.com/file/d/1emLAe7002_syWNxsTO0MgVg4knokFVlQ/view?usp=sharing"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = {
@@ -104,7 +106,7 @@ def get_settings():
     settings = {
         "project_name": PROJECT_NAME,
         "license": LICENSE,
-        "hide_dataset": HIDE_DATASET,        
+        "hide_dataset": HIDE_DATASET,
         "applications": APPLICATIONS,
         "category": CATEGORY,
         "cv_tasks": CV_TASKS,

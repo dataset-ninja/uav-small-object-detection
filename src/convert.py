@@ -3,11 +3,11 @@ import xml.etree.ElementTree as ET
 from urllib.parse import unquote, urlparse
 
 import supervisely as sly
-from dataset_tools.convert import unpack_if_archive
 from supervisely.io.fs import file_exists, get_file_name, get_file_size
 from tqdm import tqdm
 
 import src.settings as s
+from dataset_tools.convert import unpack_if_archive
 
 
 def download_dataset(teamfiles_dir: str) -> str:
@@ -58,11 +58,12 @@ def download_dataset(teamfiles_dir: str) -> str:
 def convert_and_upload_supervisely_project(
     api: sly.Api, workspace_id: int, project_name: str
 ) -> sly.ProjectInfo:
-    dataset_path = "/Users/iwatkot/Downloads/ninja/datasets/UAVSmallObjectDetection"
+    dataset_path = "APP_DATA/small-weak-UVA-object-dataset"
 
     batch_size = 30
-    images_folders_suffix = "_images"
-    bboxes_folders_suffix = "_annots"
+    images_folders = "JPEGImages"
+    bboxes_folders = "Annotations"
+    ds_name = "ds"
     bboxes_ext = ".xml"
 
     def create_ann(image_path):
@@ -127,27 +128,27 @@ def convert_and_upload_supervisely_project(
     )
     api.project.update_meta(project.id, meta.to_json())
 
-    for ds_name in ["train", "valid", "test"]:
-        images_path = os.path.join(dataset_path, ds_name + images_folders_suffix)
-        bboxes_path = os.path.join(dataset_path, ds_name + bboxes_folders_suffix)
+    # for ds_name in ["train", "valid", "test"]:
+    images_path = os.path.join(dataset_path, images_folders)
+    bboxes_path = os.path.join(dataset_path, bboxes_folders)
 
-        images_names = os.listdir(images_path)
+    images_names = os.listdir(images_path)
 
-        dataset = api.dataset.create(project.id, ds_name, change_name_if_conflict=True)
+    dataset = api.dataset.create(project.id, ds_name, change_name_if_conflict=True)
 
-        progress = sly.Progress("Create dataset {}".format(ds_name), len(images_names))
+    progress = sly.Progress("Create dataset {}".format(ds_name), len(images_names))
 
-        for images_names_batch in sly.batched(images_names, batch_size=batch_size):
-            img_pathes_batch = [
-                os.path.join(images_path, image_name) for image_name in images_names_batch
-            ]
+    for images_names_batch in sly.batched(images_names, batch_size=batch_size):
+        img_pathes_batch = [
+            os.path.join(images_path, image_name) for image_name in images_names_batch
+        ]
 
-            img_infos = api.image.upload_paths(dataset.id, images_names_batch, img_pathes_batch)
-            img_ids = [im_info.id for im_info in img_infos]
+        img_infos = api.image.upload_paths(dataset.id, images_names_batch, img_pathes_batch)
+        img_ids = [im_info.id for im_info in img_infos]
 
-            anns = [create_ann(image_path) for image_path in img_pathes_batch]
-            api.annotation.upload_anns(img_ids, anns)
+        anns = [create_ann(image_path) for image_path in img_pathes_batch]
+        api.annotation.upload_anns(img_ids, anns)
 
-            progress.iters_done_report(len(images_names_batch))
+        progress.iters_done_report(len(images_names_batch))
 
     return project
