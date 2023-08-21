@@ -20,7 +20,7 @@ HIDE_DATASET = False  # set False when 100% sure about repo quality
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = License.CC0_1_0()
+LICENSE: License = License.CC_BY_NC_ND_4_0()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [
     Domain.SmallWeakObjectsDetection(),
     Domain.DroneInspection(),
