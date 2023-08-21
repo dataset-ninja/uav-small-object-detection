@@ -1,3 +1,3 @@
-# UAV Small Object Detection (UAVOD-10)
+# UAVOD-10: 10 category UAV Small Weak Object Detection Dataset
 
-UAV Small Object Detection (UAVOD-10) is a dataset for object detection tasks.
+UAVOD-10 is a dataset for object detection tasks.

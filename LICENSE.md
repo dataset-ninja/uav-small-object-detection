@@ -1,1 +1,1 @@
-UAV Small Object Detection is under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) license.
+UAVOD-10: 10 category UAV Small Weak Object Detection Dataset is under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode) license.
