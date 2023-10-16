@@ -1,6 +1,6 @@
 Dataset **UAVOD-10** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/V/R/2h/YX11y28XFtaX3ybrc1dAY0OZWHfPfdv1hGCi3wWR3tuBnLpfa2l16CNeh51Pb4hbik9b8AwEdJw9vcn47YEh5pooM9YH8Eisji5ciZtSFGYNlbHcAvOKCupmXo83.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/9/G/8V/JYm7mUxGwx2anrqkVy2TGg10W3kd14Sr3RmclEhgZ6XdlbG94Jcz9RxqJ4fTjN5wsYgWzKmBq2ERKWtzskM0edmHnFO07Kf50XEneUEkDtfQ4MNGDBAcumibHxXG.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
