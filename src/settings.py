@@ -26,7 +26,7 @@ APPLICATIONS: List[Union[Industry, Domain, Research]] = [
     Domain.DroneInspection(),
     Research.Geospatial(),
 ]
-CATEGORY: Category = Category.Aerial(extra=Category.Drones(), is_original_dataset=False)
+CATEGORY: Category = Category.Aerial(extra=Category.Drones(), is_original_dataset=True)
 
 CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
