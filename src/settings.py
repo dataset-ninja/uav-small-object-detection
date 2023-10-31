@@ -84,6 +84,7 @@ AUTHORS: Optional[List[str]] = [
     "Xiaohan Zhang",
     "Lizhe Wang",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["weihan@cug.edu.cn"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "China University of Geosciences"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://en.cug.edu.cn/"
@@ -131,6 +132,7 @@ def get_settings():
     settings["paper"] = PAPER
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
